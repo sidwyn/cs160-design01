@@ -120,37 +120,37 @@ public class AgeConverter extends Activity {
 
                 // Venus
                 double venusCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.VENUS.getDays();
-                double venusWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double venusWeightCalculation = userWeightFloat * EarthDays.VENUS.getWeight();
                 String formattedString2 = String.format("%.2f years, %.2f kg", venusCalculation, venusWeightCalculation);
                 venusAge.setText(formattedString2);
 
                 // Mars
                 double marsCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.MARS.getDays();
-                double marsWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double marsWeightCalculation = userWeightFloat * EarthDays.MARS.getWeight();
                 String formattedString3 = String.format("%.2f years, %.2f kg", marsCalculation, marsWeightCalculation);
                 marsAge.setText(formattedString3);
 
                 // Jupiter
                 double jupiterCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.JUPITER.getDays();
-                double jupiterWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double jupiterWeightCalculation = userWeightFloat * EarthDays.JUPITER.getWeight();
                 String formattedString4 = String.format("%.2f years, %.2f kg", jupiterCalculation, jupiterWeightCalculation);
                 jupiterAge.setText(formattedString4);
 
                 // Saturn
                 double saturnCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.SATURN.getDays();
-                double saturnWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double saturnWeightCalculation = userWeightFloat * EarthDays.SATURN.getWeight();
                 String formattedString5 = String.format("%.2f years, %.2f kg", saturnCalculation, saturnWeightCalculation);
                 saturnAge.setText(formattedString5);
 
                 // Uranus
                 double uranusCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.URANUS.getDays();
-                double uranusWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double uranusWeightCalculation = userWeightFloat * EarthDays.URANUS.getWeight();
                 String formattedString6 = String.format("%.2f years, %.2f kg", uranusCalculation, uranusWeightCalculation);
                 uranusAge.setText(formattedString6);
 
                 // Neptune
                 double neptuneCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.NEPTUNE.getDays();
-                double neptuneWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                double neptuneWeightCalculation = userWeightFloat * EarthDays.NEPTUNE.getWeight();
                 String formattedString7 = String.format("%.2f years, %.2f kg", neptuneCalculation, neptuneWeightCalculation);
                 neptuneAge.setText(formattedString7);
             }

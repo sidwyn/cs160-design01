@@ -65,7 +65,7 @@
             android:id="@+id/weightField"
             android:layout_width="80dip"
             android:layout_height="40dip"
-            android:hint="e.g. 18"
+            android:hint="e.g. 70"
             android:layout_marginLeft="20px"
             android:layout_toRightOf="@+id/yourWeight"/>
 
@@ -104,11 +104,13 @@
                 android:id="@+id/mercuryLabel"
                 android:text="Mercury"
                 android:textStyle="bold"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/mercuryAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -124,12 +126,14 @@
             <TextView
                 android:id="@+id/venusLabel"
                 android:text="Venus"
+                android:textSize="50px"
                 android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/venusAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -145,11 +149,13 @@
                 android:id="@+id/earthLabel"
                 android:text="Earth"
                 android:textStyle="bold"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/earthAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -165,11 +171,13 @@
                 android:id="@+id/marsLabel"
                 android:text="Mars"
                 android:textStyle="bold"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/marsAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -186,11 +194,13 @@
                 android:id="@+id/jupiterLabel"
                 android:text="Jupiter"
                 android:textStyle="bold"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/jupiterAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -207,11 +217,13 @@
                 android:id="@+id/saturnLabel"
                 android:text="Saturn"
                 android:textStyle="bold"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/saturnAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -227,12 +239,14 @@
             <TextView
                 android:id="@+id/uranusLabel"
                 android:text="Uranus"
+                android:textSize="50px"
                 android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/uranusAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
@@ -248,12 +262,14 @@
             <TextView
                 android:id="@+id/neptuneLabel"
                 android:text="Neptune"
+                android:textSize="50px"
                 android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/neptuneAge"
                 android:layout_marginLeft="40px"
+                android:textSize="50px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="" />
         </TableRow>
