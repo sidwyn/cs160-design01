@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".AgeConverter">
+
+    <TextView
+        android:id="@+id/yourAge"
+        android:text="@string/your_age"
+        android:layout_marginTop="30px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <EditText
+        android:id="@+id/ageField"
+        android:layout_width="80dip"
+        android:layout_height="40dip"
+        android:hint="e.g. 18"
+        android:layout_marginLeft="20px"
+        android:layout_toRightOf="@+id/yourAge"/>
+
+    <TextView
+        android:id="@+id/yearsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="years"
+        android:layout_toRightOf="@+id/ageField"/>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_marginLeft="15dip"
+        android:textSize="30px"
+        android:layout_toRightOf="@+id/yearsText"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50px"
+        android:layout_below="@+id/yourAge">
+
+        <View
+            android:layout_height="2dip"
+            android:background="#FF0000"/>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="15dp"/>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/mercuryLabel"
+                android:text="Mercury"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/mercuryAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/venusLabel"
+                android:text="Venus"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/venusAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/earthLabel"
+                android:text="Earth"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/earthAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/marsLabel"
+                android:text="Mars"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/marsAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/jupiterLabel"
+                android:text="Jupiter"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/jupiterAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/saturnLabel"
+                android:text="Saturn"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/saturnAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/uranusLabel"
+                android:text="Uranus"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/uranusAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_marginBottom="5px">
+
+            <TextView
+                android:id="@+id/neptuneLabel"
+                android:text="Neptune"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/neptuneAge"
+                android:layout_marginLeft="40px"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="10 years" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+
+</RelativeLayout>
