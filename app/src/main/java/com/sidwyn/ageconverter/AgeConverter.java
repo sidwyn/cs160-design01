@@ -70,6 +70,7 @@ public class AgeConverter extends Activity {
         userAge = (EditText) findViewById(R.id.ageField);
         userWeight = (EditText) findViewById(R.id.weightField);
 
+        earthAge = (TextView) findViewById(R.id.earthAge);
         mercuryAge = (TextView) findViewById(R.id.mercuryAge);
         venusAge = (TextView) findViewById(R.id.venusAge);
         marsAge = (TextView) findViewById(R.id.marsAge);
@@ -77,14 +78,6 @@ public class AgeConverter extends Activity {
         saturnAge = (TextView) findViewById(R.id.saturnAge);
         uranusAge = (TextView) findViewById(R.id.uranusAge);
         neptuneAge = (TextView) findViewById(R.id.neptuneAge);
-
-        mercuryWeight = (TextView) findViewById(R.id.mercuryAge);
-        venusWeight = (TextView) findViewById(R.id.venusAge);
-        marsWeight = (TextView) findViewById(R.id.marsAge);
-        jupiterWeight = (TextView) findViewById(R.id.jupiterAge);
-        saturnWeight = (TextView) findViewById(R.id.saturnAge);
-        uranusWeight = (TextView) findViewById(R.id.uranusAge);
-        neptuneWeight = (TextView) findViewById(R.id.neptuneAge);
 
         convertButton.setOnClickListener(new OnClickListener() {
 
@@ -113,6 +106,11 @@ public class AgeConverter extends Activity {
                     Toast.makeText(AgeConverter.this, R.string.incorrect_weight, Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                // Earth
+                String originalString = String.format("%.2f years, %.2f kg", userAgeFloat, userWeightFloat);
+                earthAge.setText(originalString);
+
                 // Mercury
                 double mercuryCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.MERCURY.getDays();
                 double mercuryWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
