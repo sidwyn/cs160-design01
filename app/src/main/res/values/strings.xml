@@ -3,6 +3,11 @@
 
     <string name="app_name">AgeConverter</string>
     <string name="your_age">Your Earthly Age:</string>
+    <string name="your_weight">Your Earthly Weight:</string>
     <string name="action_settings">Settings</string>
+    <string name="incorrect_age">Please enter your age correctly.</string>
+    <string name="missing_age">Please enter your age.</string>
+    <string name="incorrect_weight">Please enter your weight correctly.</string>
+    <string name="missing_weight">Please enter your weight.</string>
 
 </resources>

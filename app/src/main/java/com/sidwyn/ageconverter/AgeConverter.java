@@ -5,45 +5,54 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 public class AgeConverter extends Activity {
 
     public enum EarthDays {
-        MERCURY(87.96),
-        VENUS(224.68),
-        EARTH(365.26),
-        MARS(686.96),
-        JUPITER(11.862),
-        SATURN(29.456),
-        URANUS(84.07),
-        NEPTUNE(164.81);
+        MERCURY(87.96, 0.378),
+        VENUS(224.68, 0.907),
+        EARTH(365.26, 0.166),
+        MARS(686.96, 0.377),
+        JUPITER(11.862, 2.364),
+        SATURN(29.456, 0.916),
+        URANUS(84.07, 0.889),
+        NEPTUNE(164.81, 1.125);
 
 
         private final double days;
-        EarthDays(double days) {
+        private final double weight;
+
+        EarthDays(double days, double weight) {
             this.days = days;
+            this.weight = weight;
         }
 
         public double getDays() {
             return days;
         }
 
+        public double getWeight() {
+            return weight;
+        }
+
     }
 
     private EditText userAge;
+    private EditText userWeight;
     private Button convertButton;
-    private TextView mercuryAge;
-    private TextView venusAge;
-    private TextView earthAge;
-    private TextView marsAge;
-    private TextView jupiterAge;
-    private TextView saturnAge;
-    private TextView uranusAge;
-    private TextView neptuneAge;
+    private TextView mercuryAge, mercuryWeight;
+    private TextView venusAge, venusWeight;
+    private TextView earthAge, earthWeight;
+    private TextView marsAge, marsWeight;
+    private TextView jupiterAge, jupiterWeight;
+    private TextView saturnAge, saturnWeight;
+    private TextView uranusAge, uranusWeight;
+    private TextView neptuneAge, neptuneWeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +68,8 @@ public class AgeConverter extends Activity {
         convertButton = (Button) findViewById(R.id.convertButton);
 
         userAge = (EditText) findViewById(R.id.ageField);
+        userWeight = (EditText) findViewById(R.id.weightField);
+
         mercuryAge = (TextView) findViewById(R.id.mercuryAge);
         venusAge = (TextView) findViewById(R.id.venusAge);
         marsAge = (TextView) findViewById(R.id.marsAge);
@@ -67,45 +78,89 @@ public class AgeConverter extends Activity {
         uranusAge = (TextView) findViewById(R.id.uranusAge);
         neptuneAge = (TextView) findViewById(R.id.neptuneAge);
 
+        mercuryWeight = (TextView) findViewById(R.id.mercuryAge);
+        venusWeight = (TextView) findViewById(R.id.venusAge);
+        marsWeight = (TextView) findViewById(R.id.marsAge);
+        jupiterWeight = (TextView) findViewById(R.id.jupiterAge);
+        saturnWeight = (TextView) findViewById(R.id.saturnAge);
+        uranusWeight = (TextView) findViewById(R.id.uranusAge);
+        neptuneWeight = (TextView) findViewById(R.id.neptuneAge);
+
         convertButton.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
+
                 String userAgeString = userAge.getText().toString();
+                if (userAgeString.length() == 0) {
+                    Toast.makeText(AgeConverter.this, R.string.missing_age, Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 float userAgeFloat = Float.parseFloat(userAgeString);
 
+                String userWeightString = userWeight.getText().toString();
+                if (userWeightString.length() == 0) {
+                    Toast.makeText(AgeConverter.this, R.string.missing_weight, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                float userWeightFloat = Float.parseFloat(userWeightString);
+
+                if (userAgeFloat <= 0) {
+                    Toast.makeText(AgeConverter.this, R.string.incorrect_age, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (userWeightFloat <= 0) {
+                    Toast.makeText(AgeConverter.this, R.string.incorrect_weight, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // Mercury
                 double mercuryCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.MERCURY.getDays();
-                String formattedString = String.format("%.2f years", mercuryCalculation);
+                double mercuryWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString = String.format("%.2f years, %.2f kg", mercuryCalculation, mercuryWeightCalculation);
+
                 mercuryAge.setText(formattedString);
 
+                // Venus
                 double venusCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.VENUS.getDays();
-                String formattedString2 = String.format("%.2f years", venusCalculation);
+                double venusWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString2 = String.format("%.2f years, %.2f kg", venusCalculation, venusWeightCalculation);
                 venusAge.setText(formattedString2);
 
+                // Mars
                 double marsCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.MARS.getDays();
-                String formattedString3 = String.format("%.2f years", marsCalculation);
+                double marsWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString3 = String.format("%.2f years, %.2f kg", marsCalculation, marsWeightCalculation);
                 marsAge.setText(formattedString3);
 
+                // Jupiter
                 double jupiterCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.JUPITER.getDays();
-                String formattedString4 = String.format("%.2f years", jupiterCalculation);
+                double jupiterWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString4 = String.format("%.2f years, %.2f kg", jupiterCalculation, jupiterWeightCalculation);
                 jupiterAge.setText(formattedString4);
 
+                // Saturn
                 double saturnCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.SATURN.getDays();
-                String formattedString5 = String.format("%.2f years", saturnCalculation);
+                double saturnWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString5 = String.format("%.2f years, %.2f kg", saturnCalculation, saturnWeightCalculation);
                 saturnAge.setText(formattedString5);
 
+                // Uranus
                 double uranusCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.URANUS.getDays();
-                String formattedString6 = String.format("%.2f years", uranusCalculation);
+                double uranusWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString6 = String.format("%.2f years, %.2f kg", uranusCalculation, uranusWeightCalculation);
                 uranusAge.setText(formattedString6);
 
+                // Neptune
                 double neptuneCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.NEPTUNE.getDays();
-                String formattedString7 = String.format("%.2f years", neptuneCalculation);
+                double neptuneWeightCalculation = userWeightFloat * EarthDays.MERCURY.getWeight();
+                String formattedString7 = String.format("%.2f years, %.2f kg", neptuneCalculation, neptuneWeightCalculation);
                 neptuneAge.setText(formattedString7);
             }
 
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

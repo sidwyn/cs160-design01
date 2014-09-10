@@ -8,43 +8,82 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".AgeConverter">
 
-    <TextView
-        android:id="@+id/yourAge"
-        android:text="@string/your_age"
-        android:layout_marginTop="30px"
+    <RelativeLayout
+        android:id="@+id/ageLayout"
+        android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    
-    <EditText
-        android:id="@+id/ageField"
-        android:layout_width="80dip"
-        android:layout_height="40dip"
-        android:hint="e.g. 18"
-        android:layout_marginLeft="20px"
-        android:layout_toRightOf="@+id/yourAge"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/yourAge"
+            android:text="@string/your_age"
+            android:layout_marginTop="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/yearsText"
+        <EditText
+            android:id="@+id/ageField"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:hint="e.g. 18"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/yourAge"/>
+
+        <TextView
+            android:id="@+id/yearsText"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="years"
+            android:layout_toRightOf="@+id/ageField"/>
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:layout_marginLeft="15dip"
+            android:textSize="30px"
+            android:layout_toRightOf="@+id/yearsText"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/weightLayout"
+        android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="years"
-        android:layout_toRightOf="@+id/ageField"/>
+        android:layout_below="@+id/ageLayout">
 
-    <Button
-        android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Convert"
-        android:layout_marginLeft="15dip"
-        android:textSize="30px"
-        android:layout_toRightOf="@+id/yearsText"/>
+
+        <TextView
+            android:id="@+id/yourWeight"
+            android:text="@string/your_weight"
+            android:layout_marginTop="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/weightField"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:hint="e.g. 18"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/yourWeight"/>
+
+        <TextView
+            android:id="@+id/weightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            android:layout_toRightOf="@+id/weightField"/>
+
+    </RelativeLayout>
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="50px"
-        android:layout_below="@+id/yourAge">
+        android:layout_below="@+id/weightLayout">
 
         <View
             android:layout_height="2dip"
@@ -64,13 +103,14 @@
             <TextView
                 android:id="@+id/mercuryLabel"
                 android:text="Mercury"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/mercuryAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
@@ -84,13 +124,14 @@
             <TextView
                 android:id="@+id/venusLabel"
                 android:text="Venus"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/venusAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
         <TableRow
@@ -103,13 +144,14 @@
             <TextView
                 android:id="@+id/earthLabel"
                 android:text="Earth"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/earthAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
         <TableRow
@@ -122,13 +164,14 @@
             <TextView
                 android:id="@+id/marsLabel"
                 android:text="Mars"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/marsAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
@@ -142,13 +185,14 @@
             <TextView
                 android:id="@+id/jupiterLabel"
                 android:text="Jupiter"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/jupiterAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
@@ -162,13 +206,14 @@
             <TextView
                 android:id="@+id/saturnLabel"
                 android:text="Saturn"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/saturnAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
@@ -182,13 +227,14 @@
             <TextView
                 android:id="@+id/uranusLabel"
                 android:text="Uranus"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/uranusAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
@@ -202,13 +248,14 @@
             <TextView
                 android:id="@+id/neptuneLabel"
                 android:text="Neptune"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/neptuneAge"
                 android:layout_marginLeft="40px"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="10 years" />
+                android:text="" />
         </TableRow>
 
 
