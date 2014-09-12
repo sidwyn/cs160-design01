@@ -1,14 +1,19 @@
 package com.sidwyn.ageconverter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 public class AgeConverter extends Activity {
@@ -61,6 +66,23 @@ public class AgeConverter extends Activity {
 
 
         addListenerOnButton();
+
+
+        userAge = (EditText) findViewById(R.id.ageField);
+        userWeight = (EditText) findViewById(R.id.weightField);
+        userWeight.setOnEditorActionListener(new OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    System.out.println("Event pressed");
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(userWeight.getWindowToken(), 0);
+                    userAge.clearFocus();
+                    userWeight.clearFocus();
+                    convertButton.callOnClick();
+                }
+                return false;
+            }
+        });
     }
 
     public void addListenerOnButton() {
