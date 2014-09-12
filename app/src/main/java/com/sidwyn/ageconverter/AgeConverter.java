@@ -153,25 +153,25 @@ public class AgeConverter extends Activity {
                 marsAge.setText(formattedString3);
 
                 // Jupiter
-                double jupiterCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.JUPITER.getDays();
+                double jupiterCalculation = userAgeFloat / EarthDays.JUPITER.getDays();
                 double jupiterWeightCalculation = userWeightFloat * EarthDays.JUPITER.getWeight();
                 String formattedString4 = String.format("%.2f years, %.2f kg", jupiterCalculation, jupiterWeightCalculation);
                 jupiterAge.setText(formattedString4);
 
                 // Saturn
-                double saturnCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.SATURN.getDays();
+                double saturnCalculation = userAgeFloat / EarthDays.SATURN.getDays();
                 double saturnWeightCalculation = userWeightFloat * EarthDays.SATURN.getWeight();
                 String formattedString5 = String.format("%.2f years, %.2f kg", saturnCalculation, saturnWeightCalculation);
                 saturnAge.setText(formattedString5);
 
                 // Uranus
-                double uranusCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.URANUS.getDays();
+                double uranusCalculation = userAgeFloat / EarthDays.URANUS.getDays();
                 double uranusWeightCalculation = userWeightFloat * EarthDays.URANUS.getWeight();
                 String formattedString6 = String.format("%.2f years, %.2f kg", uranusCalculation, uranusWeightCalculation);
                 uranusAge.setText(formattedString6);
 
                 // Neptune
-                double neptuneCalculation = userAgeFloat * EarthDays.EARTH.getDays() / EarthDays.NEPTUNE.getDays();
+                double neptuneCalculation = userAgeFloat / EarthDays.NEPTUNE.getDays();
                 double neptuneWeightCalculation = userWeightFloat * EarthDays.NEPTUNE.getWeight();
                 String formattedString7 = String.format("%.2f years, %.2f kg", neptuneCalculation, neptuneWeightCalculation);
                 neptuneAge.setText(formattedString7);

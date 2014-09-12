@@ -28,7 +28,8 @@
             android:layout_centerVertical="true"
             android:hint="e.g. 18"
             android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@+id/yourAge"/>
+            android:layout_toRightOf="@+id/yourAge"
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/yearsText"
@@ -71,7 +72,8 @@
             android:layout_height="40dip"
             android:hint="e.g. 70"
             android:layout_marginLeft="20px"
-            android:layout_toRightOf="@+id/yourWeight"/>
+            android:layout_toRightOf="@+id/yourWeight"
+            android:inputType="number" />
 
         <TextView
             android:id="@+id/weightText"
